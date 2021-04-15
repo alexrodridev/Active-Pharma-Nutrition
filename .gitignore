@@ -3,6 +3,7 @@
 /public/storage
 /storage/*.key
 /vendor
+/zenna
 .env
 .env.backup
 .phpunit.result.cache
