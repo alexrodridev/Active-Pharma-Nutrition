@@ -33,7 +33,7 @@
           <h1>@yield('code')</h1>
           <h2 class="mb-50">@yield('title')</h2>
           <p class="mb-50">@yield('message')</p>
-          <p class="mb-20">Você pode voltar para <a href="/">Pagina Inicial</a> ou faça uma busca</p>
+          <p class="mb-20">Você pode voltar para <a href="{{ app('router')->has('home') ? route('home') : url('/') }}">Pagina Inicial</a> ou faça uma busca</p>
           <form class="relative">
             <input type="search" placeholder="Search" class="mb-0">
             <button type="submit" class="search-button"><i class="fa fa-search"></i></button>

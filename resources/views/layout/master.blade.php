@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>{{ config('app.name') }}@yield('title')</title>
+		<title>@yield('title'){{ config('app.name') }}</title>
 
 		<!-- Fonts -->
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,400i,600,700' rel='stylesheet'>
@@ -93,7 +93,7 @@
 									<div class="logo-container">
 										<div class="logo-wrap">
 											<a href="index.html">
-												<img class="logo-dark" src="img/logo_dark.png" alt="logo">
+												<img class="logo-dark" src="{{ asset('img/logo_dark.png') }}" alt="logo">
 											</a>
 										</div>
 									</div>
@@ -148,6 +148,7 @@
 												<a href="#">Blog</a>
 												<i class="fa fa-angle-down dropdown-trigger"></i>
 												<ul class="dropdown-menu">
+													<li><a href="{{ route('blog.index') }}">Veja nossos postes</a></li>
 													<li><a href="blog-standard.html">Standard</a></li>
 													<li><a href="blog-single.html">Single Post</a></li>
 												</ul>
