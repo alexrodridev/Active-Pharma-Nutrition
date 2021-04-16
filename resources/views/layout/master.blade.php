@@ -4,19 +4,18 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>{{config('app.name')}}</title>
+		<title>{{ config('app.name') }}@yield('title')</title>
 
 		<!-- Fonts -->
-		{{-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> --}}
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,400i,600,700' rel='stylesheet'>
 
 		<!-- Css -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/magnific-popup.css">
-		<link rel="stylesheet" href="css/font-icons.css">
-		<link rel="stylesheet" href="css/sliders.css">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/font-icons.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/sliders.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 	</head>
 	<body class="relative">
 		<!-- Preloader -->
@@ -121,16 +120,19 @@
 										
 										<ul class="nav navbar-nav">
 	
-											<li class="dropdown">
-												<a href="#">Home</a>
-												<i class="fa fa-angle-down dropdown-trigger"></i>
-												<ul class="dropdown-menu">
-													<li><a href="index.html">Home</a></li>
-													<li><a href="index-2.html">Home 2</a></li>
-													<li><a href="index-3.html">Home 3</a></li>
-												</ul>
+											<li>
+												<a href="{{ url('/') }}">Home</a>
 											</li>
 	
+											<li class="dropdown">
+												<a href="#">Sobre-Nós</a>
+												<i class="fa fa-angle-down dropdown-trigger"></i>
+												<ul class="dropdown-menu">
+													<li><a href="faq.html">F.A.Q</a></li>
+													<li><a href="faq.html">F.A.Q</a></li>
+												</ul>
+											</li>
+
 											<li class="dropdown">
 												<a href="#">Pages</a>
 												<i class="fa fa-angle-down dropdown-trigger"></i>
@@ -1057,9 +1059,9 @@
 			</div> <!-- end content wrapper -->
 		</main> <!-- end main wrapper -->
 		<!-- jQuery Scripts -->
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/plugins.js"></script>
-		<script type="text/javascript" src="js/scripts.js"></script>
+		<script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/plugins.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
 	</body>
 </html>

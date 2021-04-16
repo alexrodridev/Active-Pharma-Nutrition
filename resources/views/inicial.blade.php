@@ -1,5 +1,7 @@
 @extends('layout.master')
 
+@section('title', ' - Active Pharma Nutrition')
+
 @section('content-page')
   <!-- Hero Slider -->
   <section class="hero-wrap text-center relative">
