@@ -10,14 +10,17 @@ class BlogController extends Controller
     public function index()
     {
         $blog = Blog::where('status',1)->paginate(5);
-        // dd($blog);
-        return view('site.blog.index',['blog' => $blog]);
+        $blogRecent = Blog::where('status',1)->orderBy('created_at', 'desc')->limit(5)->get();
+        return view('site.blog.index',['blog' => $blog, 'blogRecent' => $blogRecent]);
     }
 
     public function show($slug)
     {
         $blog = Blog::where('slug',$slug)->first();
-        // dd($blog);
-        return view('site.blog.show',['b' => $blog]);
+        if (!$blog) {
+            abort(404);
+        }
+        $blogRecent = Blog::where('status',1)->orderBy('created_at', 'desc')->limit(5)->get();
+        return view('site.blog.show',['b' => $blog, 'blogRecent' => $blogRecent]);
     }
 }

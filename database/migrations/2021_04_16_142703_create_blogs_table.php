@@ -21,6 +21,7 @@ class CreateBlogsTable extends Migration
             $table->text('conteudo');
             $table->string('tag');
             $table->string('slug');
+            $table->integer('tipo')->default(1);
             $table->timestamps();
         });
     }
