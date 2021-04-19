@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('title', ' - Active Pharma Nutrition')
+@section('title', 'Active Pharma Nutrition - ')
 
 @section('content-page')
   <!-- Hero Slider -->

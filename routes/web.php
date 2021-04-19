@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ProdutoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,4 @@ use App\Http\Controllers\BlogController;
 
 Route::get('/', [SiteController::class, 'index']);
 Route::resource('blog', BlogController::class);
+Route::resource('catalogo', ProdutoController::class);

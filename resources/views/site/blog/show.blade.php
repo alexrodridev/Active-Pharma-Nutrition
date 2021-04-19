@@ -229,17 +229,6 @@
           @foreach ($tags as $t)
           <a href="#">{{ $t }}</a>
           @endforeach
-          <a href="#">Multi-purpose</a>
-          <a href="#">Creative</a>
-          <a href="#">Elegant</a>
-          <a href="#">Clean</a>
-          <a href="#">Modern</a>
-          <a href="#">Responsive</a>
-          <a href="#">E-commerce</a>
-          <a href="#">WordPress</a>
-          <a href="#">Woocommerce</a>
-          <a href="#">Store</a>
-          <a href="#">Business</a>
         </div>
 
       </aside> <!-- end sidebar -->

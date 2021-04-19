@@ -123,21 +123,12 @@
 											<li>
 												<a href="{{ url('/') }}">Home</a>
 											</li>
-	
-											<li class="dropdown">
-												<a href="#">Sobre-Nós</a>
-												<i class="fa fa-angle-down dropdown-trigger"></i>
-												<ul class="dropdown-menu">
-													<li><a href="faq.html">F.A.Q</a></li>
-													<li><a href="faq.html">F.A.Q</a></li>
-												</ul>
-											</li>
 
 											<li class="dropdown">
 												<a href="#">Pages</a>
 												<i class="fa fa-angle-down dropdown-trigger"></i>
 												<ul class="dropdown-menu">
-													<li><a href="about-us.html">About Us</a></li>
+													<li><a href="about-us.html">Sobre-Nós</a></li>
 													<li><a href="contact.html">Contact</a></li>
 													<li><a href="faq.html">F.A.Q</a></li>
 													<li><a href="404.html">404</a></li>
@@ -153,9 +144,9 @@
 													<li><a href="blog-single.html">Single Post</a></li>
 												</ul>
 											</li>
-	
+											
 											<li class="dropdown">
-												<a href="#">Shop</a>
+												<a href="{{ route('catalogo.index') }}">Produtos</a>
 												<i class="fa fa-angle-down dropdown-trigger"></i>
 												<ul class="dropdown-menu megamenu-wide">
 													<li>
