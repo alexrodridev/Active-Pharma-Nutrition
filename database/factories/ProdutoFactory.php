@@ -26,6 +26,15 @@ class ProdutoFactory extends Factory
             'descricao' => $this->faker->text(200),
             'tag' => $this->faker->words(5,true),
             'slug' => $this->faker->slug(),
+            'relacionados' => json_encode([
+                rand(1,50),
+                rand(1,50),
+                rand(1,50),
+                rand(1,50),
+                rand(1,50),
+                rand(1,50),
+                rand(1,50),
+            ]),
         ];
     }
 }
