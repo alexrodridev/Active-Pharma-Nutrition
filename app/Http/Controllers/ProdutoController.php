@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Produto;
 
 class ProdutoController extends Controller
 {
@@ -13,7 +14,10 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        return view('site.catalogo.index');
+        $produto = Produto::where('status',1)->paginate(12);
+        // $produto = Produto::where('status',1)->paginate(12);
+        // dd($produto);
+        return view('site.catalogo.index',['produto' => $produto]);
     }
 
     /**
@@ -45,7 +49,12 @@ class ProdutoController extends Controller
      */
     public function show($id)
     {
-        //
+        $produto = Produto::where('slug',$id)->first();
+        if (!$produto) {
+            abort(404);
+        }
+        $produtosRelacionados = Produto::findMany(json_decode($produto->relacionados));
+        return view('site.catalogo.show',['p' => $produto,'produtosRelacionados' => $produtosRelacionados]);
     }
 
     /**

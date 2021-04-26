@@ -15,6 +15,7 @@ class CreateProdutosTable extends Migration
     {
         Schema::create('produtos', function (Blueprint $table) {
             $table->id();
+            $table->boolean('status')->nullable()->default(true);
             $table->string('titulo');
             $table->text('descricao');
             $table->double('preco', 15, 2)->default(123.45);

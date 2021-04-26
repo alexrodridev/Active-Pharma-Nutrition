@@ -61,11 +61,12 @@
         <div class="shop-catalogue grid-view">
 
           <div class="row items-grid">
-
+            
+            @foreach ($produto as $p)
             <div class="col-md-4 col-xs-6 product product-grid">
               <div class="product-item clearfix">
                 <div class="product-img hover-trigger">
-                  <a href="shop-single.html">
+                  <a href="{{ route('catalogo.show', $p->slug) }}">
                     <img src="img/shop/shop_item_4.jpg" alt="">
                     <img src="img/shop/shop_item_back_4.jpg" alt="" class="back-img">
                   </a>
@@ -76,12 +77,12 @@
                       </a>
                     </div>                        
                   </div>
-                  <a href="#" class="product-quickview">Quick View</a>
+                  <a href="{{ route('catalogo.show', $p->slug) }}" class="product-quickview">Click e Veja</a>
                 </div>
 
                 <div class="product-details">
                   <h3 class="product-title">
-                    <a href="shop-single.html">Sweater w/ Colar</a>
+                    <a href="{{ route('catalogo.show', $p->slug) }}">{{ $p->titulo }}</a>
                   </h3>
                   <span class="category">
                     <a href="catalogue-grid.html">Men</a>
@@ -90,24 +91,26 @@
 
                 <span class="price">
                   <ins>
-                    <span class="amount">$299.00</span>
+                    <span class="amount">R$ {{ number_format($p->preco,2,',','.') }}</span>
                   </ins>                        
                 </span>
 
                 <div class="product-description">
                   <h3 class="product-title">
-                    <a href="shop-single.html">Sweater w/ Colar</a>
+                    <a href="{{ route('catalogo.show', $p->slug) }}">{{ $p->titulo }}</a>
                   </h3>
                   <span class="price">
                     <ins>
-                      <span class="amount">$299.00</span>
+                      <span class="amount">R$ {{ number_format($p->preco,2,'.',',') }}</span>
                     </ins>                        
                   </span>
                   <span class="rating">
                     <a href="#">3 Reviews</a>
                   </span>
                   <div class="clear"></div>
-                  <p>Zenna Shop is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Grab this theme now.</p>
+                  
+                  {!! $p->descricao !!}
+
                   <a href="#" class="btn btn-dark btn-md left"><span>Add to Cart</span></a>
                   <div class="product-add-to-wishlist">
                     <a href="#"><i class="fa fa-heart"></i></a>
@@ -116,12 +119,13 @@
 
               </div>
             </div> <!-- end product -->
+            @endforeach
 
           </div> <!-- end row -->
         </div> <!-- end grid mode -->
         
         <!-- Pagination -->
-        <div class="pagination-wrap clearfix">
+        {{-- <div class="pagination-wrap clearfix">
           <p class="result-count">Showing: 12 of 80 results</p>                 
           <nav class="pagination right clearfix">
             <a href="#"><i class="fa fa-angle-left"></i></a>
@@ -131,7 +135,9 @@
             <a href="#">4</a>
             <a href="#"><i class="fa fa-angle-right"></i></a>
           </nav>
-        </div>
+        </div> --}}
+
+        {{ $produto->links() }}
 
       </div> <!-- end col -->
 

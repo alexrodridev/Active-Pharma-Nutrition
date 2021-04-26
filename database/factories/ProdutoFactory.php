@@ -25,6 +25,7 @@ class ProdutoFactory extends Factory
             'titulo' => $this->faker->name,
             'descricao' => $this->faker->text(200),
             'tag' => $this->faker->words(5,true),
+            'preco' => $this->faker->randomFloat(2),
             'slug' => $this->faker->slug(),
             'relacionados' => json_encode([
                 rand(1,50),
