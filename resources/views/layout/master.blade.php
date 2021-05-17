@@ -35,7 +35,7 @@
 						<div class="search-cell">
 							<form method="get">
 								<div class="search-field-holder">
-									<input type="search" class="form-control main-search-input" placeholder="Search for">
+									<input type="search" class="form-control main-search-input" placeholder="Buscar Produto">
 									<i class="ui-close search-close" id="search-close"></i>
 								</div>            
 							</form>
@@ -92,7 +92,7 @@
 									<!-- Logo -->
 									<div class="logo-container">
 										<div class="logo-wrap">
-											<a href="index.html">
+											<a href="{{ url('/') }}">
 												<img class="logo-dark" src="{{ asset('img/logo_dark.png') }}" alt="logo">
 											</a>
 										</div>
@@ -136,13 +136,7 @@
 											</li>
 	
 											<li class="dropdown">
-												<a href="#">Blog</a>
-												<i class="fa fa-angle-down dropdown-trigger"></i>
-												<ul class="dropdown-menu">
-													<li><a href="{{ route('blog.index') }}">Veja nossos postes</a></li>
-													<li><a href="blog-standard.html">Standard</a></li>
-													<li><a href="blog-single.html">Single Post</a></li>
-												</ul>
+												<a href="{{ route('blog.index') }}">Blog</a>
 											</li>
 											
 											<li class="dropdown">

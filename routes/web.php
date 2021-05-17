@@ -17,5 +17,6 @@ use App\Http\Controllers\ProdutoController;
 */
 
 Route::get('/', [SiteController::class, 'index']);
+Route::get('/minhaconta', [SiteController::class, 'userconta']);
 Route::resource('blog', BlogController::class);
 Route::resource('catalogo', ProdutoController::class);

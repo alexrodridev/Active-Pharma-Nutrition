@@ -10,4 +10,9 @@ class SiteController extends Controller
     {
         return view('inicial');
     }
+
+    public function userconta()
+    {
+        return view('site.contauser.cart');
+    }
 }
