@@ -16,7 +16,18 @@ use App\Http\Controllers\ProdutoController;
 |
 */
 
+Route::get('/q', function () {
+    return view('welcome');
+});
+
+// Route::get('/dashboard', function () {
+//     return view('site.contauser.cart');
+// })->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
 Route::get('/', [SiteController::class, 'index']);
-Route::get('/minhaconta', [SiteController::class, 'userconta']);
+Route::get('/dashboard', [SiteController::class, 'userconta'])->middleware(['auth'])->name('dashboard');;
+Route::get('/checkout', [SiteController::class, 'checkout'])->middleware(['auth'])->name('checkout');
 Route::resource('blog', BlogController::class);
 Route::resource('catalogo', ProdutoController::class);

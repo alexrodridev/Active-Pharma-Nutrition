@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layouts.master')
 
 @section('page-title')
 <!-- Page Title -->
@@ -15,7 +15,7 @@
             <a href="index.html">Paginas</a>
           </li>
           <li class="active">
-            @yield('code') - @yield('title')
+            @yield('title') @yield('code')
           </li>
         </ol>
       </div>
@@ -31,7 +31,7 @@
       <div class="row text-center">
         <div class="col-md-6 col-md-offset-3">
           <h1>@yield('code')</h1>
-          <h2 class="mb-50">@yield('title')</h2>
+          <h2 class="mb-50">@yield('title') @yield('code') código</h2>
           <p class="mb-50">@yield('message')</p>
           <p class="mb-20">Você pode voltar para <a href="{{ app('router')->has('home') ? route('home') : url('/') }}">Pagina Inicial</a> ou faça uma busca</p>
           <form class="relative">

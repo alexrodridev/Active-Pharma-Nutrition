@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="{{ asset('css/font-icons.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/sliders.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+		{{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
 	</head>
 	<body class="relative">
 		<!-- Preloader -->
@@ -215,7 +215,7 @@
 											</li> <!-- end elements -->
 	
 											<li class="mobile-links hidden-lg hidden-md">
-												<a href="#">My Account</a>
+												<a href="{{ route('dashboard') }}">My Account</a>
 											</li>
 				
 											<!-- Mobile search -->
@@ -235,7 +235,7 @@
 								<div class="flex-child flex-right nav-right hidden-sm hidden-xs">
 									<ul>
 										<li class="nav-register">
-											<a href="#">My Account</a>
+											<a href="{{ route('dashboard') }}">My Account</a>
 										</li>
 										<li class="nav-search-wrap style-2 hidden-sm hidden-xs">
 											<a href="#" class="nav-search search-trigger">
@@ -1048,7 +1048,7 @@
 		<script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('js/plugins.js') }}"></script>
-		<script type="text/javascript" src="{{ asset('js/twitterFetcher_min.js') }}"></script>
+		{{-- <script type="text/javascript" src="{{ asset('js/twitterFetcher_min.js') }}"></script> --}}
 		<script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
 		@yield('js')
 	</body>

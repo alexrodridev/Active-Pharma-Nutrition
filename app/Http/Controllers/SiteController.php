@@ -15,4 +15,9 @@ class SiteController extends Controller
     {
         return view('site.contauser.cart');
     }
+    
+    public function checkout()
+    {
+        return view('site.contauser.checkout');
+    }
 }
