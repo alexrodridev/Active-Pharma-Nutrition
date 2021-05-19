@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="{{ asset('css/font-icons.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/sliders.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-		{{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
+		<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
